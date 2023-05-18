@@ -1,0 +1,23 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.banner-box{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://img.freepik.com/free-photo/perspective-exterior-nobody-empty-box_1258-260.jpg?size=626&ext=jpg&ga=GA1.2.926599739.1668011211&semt=ais');
+}
+
+.banner-text{
+  font-size: 40px;
+  color: #000000;
+}
+
+.swal-wide{
+  width:300px !important;
+  font-size: 13px !important;
+}
