@@ -83,7 +83,7 @@ export default function Signup() {
                                             localStorage.setItem("usertoken", res.token);
                                             navigate('/')
                                         }, 2000);
-                                    } else {
+                                    } else if (res.status === "failed") {
                                         toast.error("This email is already registered!", {
                                             position: "top-center",
                                             autoClose: 3000,
@@ -94,6 +94,17 @@ export default function Signup() {
                                             progress: undefined,
                                             theme: "colored",
                                         });
+                                    } else {
+                                      toast.error(res.message, {
+                                        position: "top-center",
+                                        autoClose: 3000,
+                                        hideProgressBar: false,
+                                        closeOnClick: true,
+                                        pauseOnHover: true,
+                                        draggable: true,
+                                        progress: undefined,
+                                        theme: "colored",
+                                      });
                                     }
                                 }else{
                                     setPhoneNo(true)
